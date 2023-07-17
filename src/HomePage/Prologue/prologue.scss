@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+#prologue {
+    margin-top: 160px;
+    margin-bottom: 60px;
+    // background-color: #eb6e9e;
+
+    & .title {
+        font-family: 'Source Serif 4', serif;
+        font-weight: 500;
+        font-size: 57px;
+    }
+
+    & .description {
+        font-weight: 700;
+        color:#eb6e9e;
+        transform: translateY(10px);
+    }
+
+    & .content {
+        font-family: 'Open Sans', sans-serif;
+        padding: 0 50px;
+        font-size: 18px;
+        margin: 20px 0;
+    }
+
+    & .btn-try-now {
+        background-color: black;
+        color: white;
+        font-size: 16px;
+        font-family: 'Open Sans', sans-serif;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-weight: 700;
+    }
+}

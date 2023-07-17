@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+#footer {
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #fafafb;
+    font-family: 'Open Sans', sans-serif;
+
+    & .logo-discription-icon-social {
+
+        & .logo {
+            display: flex;
+            justify-content: start;
+            height: 70px;
+        }
+
+        & .description {
+            text-align: start;
+            font-size: 17px;
+        }
+
+        & .icons {
+            display: flex;
+            font-size: 27px;
+            margin: 10px 0;
+
+            & i {
+                margin: 0 6px;
+            }
+        }
+
+        & .item {
+            margin: 10px 0;
+        }
+    }
+
+    & .other {
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 30px;
+
+        & .for-designer {
+            text-align: start;
+            font-size: 20px;
+        }
+    
+        & .for-user {
+            text-align: start;
+            font-size: 20px;
+        }
+    
+        & .wed-development {
+            text-align: start;
+            font-size: 20px;
+        }
+
+        & .picture-collection {
+            text-align: start;
+            font-size: 20px;
+        }
+
+        & .title {
+            font-weight: bold;
+            font-size: 19px;
+        }
+
+        & .line {
+            font-size: 16px;
+            font-weight: 600;
+            color: #747272;
+            cursor: pointer;
+        }
+    }
+
+    & .item {
+        margin: 0 30px;
+    }
+}
+
+.copyright {
+    text-align: start;
+    font-size: 16px;
+    padding: 0 40px;
+    border-top: 1px solid #c2c2c2 ;
+    line-height: 60px;
+    background-color: #fafafb;
+}

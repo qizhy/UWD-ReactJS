@@ -1,0 +1,197 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.box-header  {
+    height: 55px;
+    width: 100%;
+}
+
+#header {
+    height: 55px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    & .logo-and-menus {
+        height: 100%;
+        display: flex;
+        justify-content: left;
+
+        & .logo {
+            height: 100%;
+            margin: 0 10px;
+        }
+
+        & .menus {
+            color: white;
+            display: flex;
+            font-family: 'Inter', sans-serif;
+            align-items: center;
+            margin-left: 25px;
+
+            & .link {
+                color: white;
+                text-decoration: none;
+            }
+
+            & .menu-item {
+                margin: 0 15px;
+                font-size: 15px;
+                font-weight: 600;
+                margin-top: 5px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                transition: 0.5s;
+                height: 100%;
+                position: relative;
+
+                & i {
+                    font-size: 23px;
+                    transition: 0.3s;
+                }
+
+                & .sub-menu-area {
+                    width: 130%;
+                    height: 0;
+                    position: absolute;
+                    background-color: black;
+                    top: 54px;
+                    left: 0;
+                    transition: 0.5s;
+                    border-radius: 0 0 6px 6px;
+                    overflow: hidden;
+                    padding: 0 10px;
+                    opacity: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+
+                    & .sub-menu-item {
+                        color: white;
+                        font-size: 14px;
+                        text-align: start;
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    & .sub-menu-item:hover {
+                        color: #d5d5d5;
+                    }
+                }
+            }
+
+            & .menu-item:hover {
+                color: #d5d5d5;
+            }
+
+            & .menu-item:hover i{
+                transform: rotate(180deg);
+            }
+
+            & .menu-item:not(:hover) i{
+                transform: rotate(360deg);
+            }
+        }
+    }
+
+    & .user-and-search {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        height: 100%;
+        position: relative;
+
+        & .image-user {
+            height: 100%;
+            margin: 0 30px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        & .profile-area {
+            position: absolute;
+            width: 300px;
+            height: 0px;
+            top: 56px;
+            right: 30px;
+            border-radius: 0 0 10px 10px;
+            background-color: black;
+            padding: 0 30px;
+            overflow: hidden;
+            transition: 0.5s;
+            opacity: 0;
+
+            & .image-area {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                & .image-user-profile {
+                    height: 80px;
+                    width: 80px;
+                    border-radius: 50%;
+                    margin: 20px 0;
+                    overflow: hidden;
+                }
+            }
+
+            & .name{
+                color: white;
+                font-size: 19px;
+                margin-bottom: 30px;
+            }
+
+            & .option {
+                color: white;
+                margin: 10px 0;
+                text-align: start;
+                font-family: 'Poppins', sans-serif;
+                cursor: pointer;
+
+                & .link {
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+
+            & .cut-across {
+                border-bottom: 1px solid #999;
+                margin: 12px 0;
+            }
+        }
+
+        & .search {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            & .icon-search {
+                position: absolute;
+                left: 20px;
+                color: #999;
+            }
+
+            & .txtsearch {
+                height: 70%;
+                border-radius: 10px;
+                width: 230px;
+                margin: 0 10px;
+                padding-left: 35px;
+            }
+
+            & .txtsearch:focus {
+                border: 0;
+                outline: 0;
+            }
+        }
+    }
+}
