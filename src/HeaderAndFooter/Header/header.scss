@@ -155,10 +155,13 @@
                 text-align: start;
                 font-family: 'Poppins', sans-serif;
                 cursor: pointer;
+                display: flex;
+                flex-direction: column;
 
                 & .link {
                     text-decoration: none;
                     color: white;
+                    margin: 5px 0;
                 }
             }
 

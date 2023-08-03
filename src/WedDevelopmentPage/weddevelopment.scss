@@ -2,10 +2,20 @@
 #wed-development {
     width: 100%;
     height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     & .title {
         font-weight: bold;
         font-size: 30px;
         margin-top: 3%;
+    }
+
+    & .wedsites {
+        width: 100%;
+        margin: 20px 0;
+        display: flex;
+        justify-content: center;
     }
 }

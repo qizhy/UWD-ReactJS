@@ -31,7 +31,7 @@ function GeneralPage({user}) {
             setTimeout(() => {setNotifi({status : 'warning', message : 'You should change your email before saving your changes'})}, 50);
         } else {
             if (value.includes('@') && value.includes('.com')) {
-                axios.put('https://uwd-node-js.vercel.app/v1/user/update-email', {email : value}, {headers : {token : 'Bearer ' + JSON.parse(localStorage.getItem('current-user')).token}})
+                axios.put('https://uwd-node.vercel.app/v1/user/update-email', {email : value}, {headers : {token : 'Bearer ' + JSON.parse(localStorage.getItem('current-user')).token}})
                     .then(res => {
                         if (res.data.code == 200) {
                             window.location.reload()
@@ -45,7 +45,7 @@ function GeneralPage({user}) {
     }
 
     const handleDeleteUser = () => {
-        axios.delete('https://uwd-node-js.vercel.app/v1/user/delete-user', {headers : {token :  'Bearer ' + JSON.parse(localStorage.getItem('current-user')).token}})
+        axios.delete('https://uwd-node.vercel.app/v1/user/delete-user', {headers : {token :  'Bearer ' + JSON.parse(localStorage.getItem('current-user')).token}})
             .then(res => {
                 if(res.data.code == 200) {
                     localStorage.removeItem('current-user')

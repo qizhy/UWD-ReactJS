@@ -1,0 +1,111 @@
+
+
+.wedsiteitem {
+    margin: 0 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px 0;
+
+    & .image:hover .box {
+        opacity: 1;
+    }
+    & .image:hover .info {
+        opacity: 1;
+    }
+
+    & .image {
+        position: relative;
+        
+        & .box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 120%;
+            margin:  0 -10%;
+            box-shadow: inset 0px -55px 15px 5px rgba(0, 0, 0, 0.363);
+            transition: 0.5s;
+            opacity: 0;
+        }
+
+        & .info {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            opacity: 0;
+            transition: 0.5s;
+
+            & .title-wedsite {
+                color: white;
+                margin-left: 15px;
+                font-weight: 500;
+                font-size: 20px;
+                // margin-bottom: 10px;
+            }
+
+            & .btn-visit {
+                background-color: white;
+                padding: 5px 10px;
+                margin: 0 10px;
+                border: 0;
+                border-radius: 5px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    & .info-user {
+        margin: 8px 0;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        & .logo {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        & .user-name {
+            margin: 0 10px;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        & .analysis {
+            display: flex;
+            position: absolute;
+            right: 0;
+
+            & .item {
+                margin: 0 4px;
+            }
+            & i {
+                font-size: 16px;
+                color: #999;
+            }
+            & span {
+                font-size: 15px;
+                margin: 0 3px;
+            }
+
+            & .heart {
+                transition: 0.5s;
+            }
+
+            & .active {
+                color: rgb(244, 92, 117);
+            }
+
+            & .heart:hover {
+                color: pink;
+            }
+        }
+
+    }
+}

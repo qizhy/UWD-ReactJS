@@ -13,7 +13,7 @@ function Login() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post('https://uwd-node-js.vercel.app/v1/auth/login', {
+        axios.post('https://uwd-node.vercel.app/v1/auth/login', {
             username : document.querySelector('#txtusername').value,
             password : document.querySelector('#txtpassword').value
         })
@@ -31,7 +31,7 @@ function Login() {
                     }, 1500)
                 } else {
                     setNotifi({status : 'none', message : ''})
-                    setTimeout(() => {setNotifi({status : 'fail', message : 'Invalid login infomation', isAuth : true})}, 50);
+                    setTimeout(() => {setNotifi({status : 'fail', message : "Invalid login infomation", isAuth : true})}, 50);
                 }
             })
     }

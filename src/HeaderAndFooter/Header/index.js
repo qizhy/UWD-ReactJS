@@ -43,7 +43,7 @@ function Header({user}) {
 
     const handleOverUser = () => {
         const area = document.querySelector('.profile-area')
-        area.style.height = '280px'
+        area.style.height = '320px'
         area.style.opacity = 1
     }
 
@@ -92,6 +92,7 @@ function Header({user}) {
                         </div>
                         <div className='col-lg-12 option'>
                             <Link className='link' to='/account/general'>Edit Profile</Link>
+                            <Link className='link' to='/wed-ui-design/add-new'>Add Wed Design</Link>
                         </div>                        
                         <div className='col-lg-12 cut-across'></div>
                         <div className='col-lg-12 option' onClick={handleClickSignOut}>

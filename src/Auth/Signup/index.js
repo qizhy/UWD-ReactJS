@@ -16,7 +16,7 @@ function Signup() {
     const handleSubmit  = (e)  => {
         e.preventDefault()
         if (document.querySelector('#txtname').value  && document.querySelector('#txtdateofbirth').value && document.querySelector('#txtpassword').value &&  resultEmail && resultUsername) {
-            axios.post('https://uwd-node-js.vercel.app/v1/auth/register', {
+            axios.post('https://uwd-node.vercel.app/v1/auth/register', {
             username : document.querySelector('#txtusername').value,
             name : document.querySelector('#txtname').value,
             password : document.querySelector('#txtpassword').value,
@@ -49,7 +49,7 @@ function Signup() {
     const handleChangeUsername = (e) =>  {
         e.preventDefault()
         const txtusername  = document.querySelector('#txtusername')
-        axios.get('https://uwd-node-js.vercel.app/v1/auth/check-username?username=' + txtusername.value)
+        axios.get('https://uwd-node.vercel.app/v1/auth/check-username?username=' + txtusername.value)
             .then (res => {
                 resultUsername = res.data.exist
                 if(resultUsername) {
@@ -66,7 +66,7 @@ function Signup() {
         e.preventDefault()
         const txtemail  = document.querySelector('#txtemail')
         if  (txtemail.value.includes('@') && txtemail.value.includes('.com')) {
-            axios.get('https://uwd-node-js.vercel.app/v1/auth/check-email?email=' + txtemail.value)
+            axios.get('https://uwd-node.vercel.app/v1/auth/check-email?email=' + txtemail.value)
             .then (res => {
                 resultEmail = res.data.exist
                 if(resultEmail) {

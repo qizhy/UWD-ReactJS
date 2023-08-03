@@ -9,6 +9,7 @@ import EditProfilePage from './UserPage/EditProfile';
 import GeneralPage from './UserPage/General';
 import PasswordPage from './UserPage/Password';
 import WedDevelopment from './WedDevelopmentPage';
+import FormAddWedsite from './WedDevelopmentPage/FormAddWedsite';
 import { BrowserRouter as Router, Routes, Route, useLocation} from 'react-router-dom';
 import './App.css';
 import Provider from './UseContext/Provider';
@@ -29,7 +30,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       if (user) {
-        await axios.get('https://uwd-node-js.vercel.app/v1/user/current-user', { headers: { token: `Bearer ${user.token}` } })
+        await axios.get('https://uwd-node.vercel.app/v1/user/current-user', { headers: { token: `Bearer ${user.token}` } })
           .then (res => {
             if (res.data.code === 200) {
               setCurrentUser(res.data.currentUser._doc);
@@ -64,6 +65,7 @@ function App() {
               <Route path='/account/general' element={<CommonLayout children={<GeneralPage user={currentUser}/>} />} />
               <Route path='/account/password' element={<CommonLayout children={<PasswordPage user={currentUser}/>} />} />
               <Route path='/wed-ui-design' element={<CommonLayout children={<WedDevelopment user={currentUser} />} />} />
+              <Route path='/wed-ui-design/add-new' element={<CommonLayout children={<FormAddWedsite />} />} />
             </Routes>
         </div>
       </Provider>
