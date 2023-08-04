@@ -49,7 +49,7 @@ function WedsiteItem({wed, active, currentUser}) {
     }
 
     const handleDeleteWed = () => {
-        axios.delete('http://localhost:8080/v1/wed/delete-wedsite', {id : wed._id})
+        axios.delete('https://uwd-node.vercel.app/v1/wed/delete-wedsite', {id : wed._id})
         .then (res => {
             console.log(res.data)
             if (res.data.code == 200) {
