@@ -41,12 +41,20 @@ function WedsiteItem({wed, active, currentUser}) {
         }
     }
     const handleUpdateView = () => {
-        console.log(wed.view + 1)
         axios.put('https://uwd-node.vercel.app/v1/wed/update-view', {id : wed._id, view : wed.view + 1})
             .then (res => {
                 if (res.data.code == 200) {
                     setTimeout(() => {window.location.reload()}, 1000)
                 }})
+    }
+
+    const handleDeleteWed = () => {
+        axios.delete('http://localhost:8080/v1/wed/delete-wedsite', {id : wed._id})
+        .then (res => {
+            console.log(res.data)
+            if (res.data.code == 200) {
+                setTimeout(() => {window.location.reload()}, 1000)
+            }})
     }
     return (
         <div className='wedsiteitem col-lg-3'>
@@ -55,11 +63,19 @@ function WedsiteItem({wed, active, currentUser}) {
                 <img width={'100%'} src={wed.url_image} />
                 <div className='info'>
                     <p className='title-wedsite'>{wed.title}</p>
-                    <button className='btn-visit' onClick={() => handleUpdateView()}>
-                        <a target='_blank' style={{color : 'black'}} href={wed.url}>
-                            <i className="fa-solid fa-eye"></i>
-                        </a>
-                    </button>
+                    <div>
+                        <button className='btn-visit' onClick={() => handleUpdateView()}>
+                            <a target='_blank' style={{color : 'black'}} href={wed.url}>
+                                <i className="fa-solid fa-eye"></i>
+                            </a>
+                        </button>
+                        {(currentUser && user) ? 
+                            currentUser._id == user._id ? 
+                            (<button className='btn-visit' onClick={() => handleDeleteWed()}>
+                                <i style={{fontSize : '17px', color : 'red'}} className="fa-solid fa-xmark"></i>
+                                </button>) : <></> : ''
+                        }
+                    </div>
                 </div>
             </div>
             <div className='col-lg-12 info-user'>
