@@ -49,7 +49,7 @@ function WedsiteItem({wed, active, currentUser}) {
     }
 
     const handleDeleteWed = () => {
-        axios.delete('http://localhost:8080/v1/wed/delete-wedsite', { data: { id: wed._id } })
+        axios.delete('https://uwd-node.vercel.app/v1/wed/delete-wedsite', { data: { id: wed._id } })
         .then (res => {
             console.log(res.data)
             if (res.data.code == 200) {
@@ -64,11 +64,11 @@ function WedsiteItem({wed, active, currentUser}) {
                 <div className='info'>
                     <p className='title-wedsite'>{wed.title}</p>
                     <div>
-                        <button className='btn-visit' onClick={() => handleUpdateView()}>
+                        {wed.url != '' ? <button className='btn-visit' onClick={() => handleUpdateView()}>
                             <a target='_blank' style={{color : 'black'}} href={wed.url}>
                                 <i className="fa-solid fa-eye"></i>
                             </a>
-                        </button>
+                        </button>:<></>}
                         {(currentUser && user) ? 
                             currentUser._id == user._id ? 
                             (<button className='btn-visit' onClick={() => handleDeleteWed()}>
