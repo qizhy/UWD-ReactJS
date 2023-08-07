@@ -52,7 +52,7 @@ function FormAddWedsite() {
                 <input ref={imageUser} type='file' accept=".jpg, .jpeg, .png"/>
             </div>
             <div className='group'>
-                <button type="button" onClick={() => handleSubmit()} class="btn btn-primary">Add Wedsite</button>
+                <button type="button" onClick={() => handleSubmit()} class="btn btn-primary">Add</button>
             </div>
         </form>
     );
