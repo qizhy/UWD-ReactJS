@@ -12,7 +12,10 @@ function FormAddWedsite() {
             const formData = new FormData();
             const file = imageUser.current.files[0]
             const title = document.querySelector('.txt-title').value
-            const url = document.querySelector('.txt-url').value
+            const url = ''
+            if (document.querySelector('.txt-url').value) {
+                url = document.querySelector('.txt-url').value
+            }
             formData.append('image', file)
             formData.append('title', title)
             formData.append('url', url)
