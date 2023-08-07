@@ -63,13 +63,13 @@ function Header({user}) {
                 <div className='menus'>
                     <Link className='link' to='/home'><div className='menu-item'>Home</div></Link>
                     <Link className='link' to='/wed-ui-design'><div className='menu-item'>Web Development</div></Link>
-                    <div className='menu-item' onMouseOver={() => handleOverMenu('sub-pic')} onMouseOut={() => handleOutMenu('sub-pic')} >Picture Collection<i className='bx bx-chevron-down'></i>
+                    {/* <div className='menu-item' onMouseOver={() => handleOverMenu('sub-pic')} onMouseOut={() => handleOutMenu('sub-pic')} >Picture Collection<i className='bx bx-chevron-down'></i>
                         <div className='sub-menu-area sub-pic'>
                             <div className='sub-menu-item'>Full Stack</div>
                             <div className='sub-menu-item'>Front End</div>
                             <div className='sub-menu-item'>Other</div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
             <div className='user-and-search col-lg-5'>
