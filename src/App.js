@@ -10,6 +10,7 @@ import GeneralPage from './UserPage/General';
 import PasswordPage from './UserPage/Password';
 import WedDevelopment from './WedDevelopmentPage';
 import FormAddWedsite from './WedDevelopmentPage/FormAddWedsite';
+import MasterEnglish from './MasterEnglish';
 import { BrowserRouter as Router, Routes, Route, useLocation} from 'react-router-dom';
 import './App.css';
 import Provider from './UseContext/Provider';
@@ -66,6 +67,7 @@ function App() {
               <Route path='/account/password' element={<CommonLayout children={<PasswordPage user={currentUser}/>} />} />
               <Route path='/wed-ui-design' element={<CommonLayout children={<WedDevelopment user={currentUser} />} />} />
               <Route path='/wed-ui-design/add-new' element={<CommonLayout children={<FormAddWedsite />} />} />
+              <Route path='/master-english' element={<CommonLayout children={<MasterEnglish />} />} />
             </Routes>
         </div>
       </Provider>
